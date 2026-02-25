@@ -19,7 +19,7 @@ const Feed = () => {
     }, [])
 
     return !loading ? (
-        <div className='h-full overflow-y-scroll no-scrollbar py-10 xl:pr-5 flex items-start justify-center xl:gap-8'>
+        <div className='h-full overflow-y-scroll no-scrollbar py-10 xl:pr-5 flex items-start justify-center xl:gap-8 bg-[#0F172A]'>
             <div>
                 <StoriesBar />
                 <div className='p-4 space-y-6'>
@@ -30,15 +30,15 @@ const Feed = () => {
             </div>
 
             <div className='max-xl:hidden sticky top-0'>
-                <div className='max-w-xs bg-white text-xs p-4 rounded-md inline-flex flex-col gap-2 shadow'>
+                <div className='max-w-xs bg-[#1E293B] text-xs p-4 rounded-md inline-flex flex-col gap-2 shadow'>
                     <h3 className='text-slate-800 fonts-semibold'>Sponsored</h3>
                     <img 
                         src={assets.sponsored_img} 
                         alt="" 
                         className='w-75 h-50 rounded-md'
                     />
-                    <p className='text-slate-600'>Email Marketing</p>
-                    <p className="text-slate-400">Empower the flow of people to your website and make yourself the leader of the sector.</p>
+                    <p className='text-[#F1F5F9]'>Email Marketing</p>
+                    <p className="text-[#94A3B8]">Empower the flow of people to your website and make yourself the leader of the sector.</p>
                 </div>
                 <RecentMessages />
             </div>

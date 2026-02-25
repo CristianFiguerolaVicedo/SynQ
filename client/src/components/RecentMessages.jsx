@@ -15,11 +15,11 @@ const RecentMessages = () => {
     }, [])
 
     return (
-        <div className='bg-white max-w-xs mt-4 p-4 min-h-20 rounded-md shadow text-xs text-slate-800'>
+        <div className='bg-[#1E293B] max-w-xs mt-4 p-4 min-h-20 rounded-md shadow text-xs text-[#F1F5F9]'>
             <h3 className='font-semibold text-slate-8 mb-4'>Recent Messages</h3>
             <div className='flex flex-col max-h-56 overflow-y-scroll no-scrollbar'>
                 {messages.map((message, index) => (
-                    <Link to={`/messages/${message.from_user_id._id}`} key={index} className='flex items-start gap-2 py-2 hover:bg-slate-100'>
+                    <Link to={`/messages/${message.from_user_id._id}`} key={index} className='flex items-start gap-2 py-2 px-4 hover:bg-[#2563EB] rounded-lg'>
                         <img 
                             src={message.from_user_id.profile_picture} 
                             alt="" 
@@ -27,12 +27,12 @@ const RecentMessages = () => {
                         />
                         <div className='w-full'>
                             <div className='flex justify-between'>
-                                <p className='font-medium'>{message.from_user_id.full_name}</p>
-                                <p className='text-[10px] text-slate-400'>{moment(message.createdAt).fromNow()}</p>
+                                <p className='font-medium text-[#F1F5F9]'>{message.from_user_id.full_name}</p>
+                                <p className='text-[10px] text-[#94A3B8]'>{moment(message.createdAt).fromNow()}</p>
                             </div>
                             <div className='flex justify-between'>
-                                <p className='text-gray-500'>{message.text ? message.text : 'Media'}</p>
-                                {!message.seen && <p className='bg-indigo-500 text-white w-4 h-4 flex items-center justify-center rounded-full text-[10px]'>1</p>}
+                                <p className='text-[#94A3B8]'>{message.text ? message.text : 'Media'}</p>
+                                {!message.seen && <p className='bg-[#3B82F6] text-white w-4 h-4 flex items-center justify-center rounded-full text-[10px]'>1</p>}
                             </div>
                         </div>
                     </Link>

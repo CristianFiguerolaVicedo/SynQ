@@ -1,16 +1,33 @@
-# React + Vite
+Base
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Background principal: #0F172A
 
-Currently, two official plugins are available:
+Background secundario (cards): #1E293B
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Hover / surface: #334155
 
-## React Compiler
+Border sutil: #1F2937
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+✍ Texto
 
-## Expanding the ESLint configuration
+Primary text: #F1F5F9
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Secondary text: #94A3B8
+
+Muted: #64748B
+
+🚀 Color principal (interacciones)
+
+Primary: #3B82F6
+
+Hover: #2563EB
+
+Active: #1D4ED8
+
+❤️ Feedback
+
+Like / error: #EF4444
+
+Success: #22C55E
+
+Warning: #F59E0B

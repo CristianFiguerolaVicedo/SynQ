@@ -16,7 +16,7 @@ const PostCard = ({post}) => {
     const navigate = useNavigate();
 
     return (
-        <div className='bg-white rounded-xl shadow p-4 space-y-4 w-full max-w-2xl'>
+        <div className='bg-[#1E293B] rounded-xl shadow p-4 space-y-4 w-full max-w-2xl'>
             <div onClick={() => navigate(`/profile/` + post.user._id)} className='inline-flex items-center gap-3 cursor-pointer'>
                 <img 
                     src={post.user.profile_picture} 
@@ -25,7 +25,7 @@ const PostCard = ({post}) => {
                 />
                 <div>
                     <div className='flex items-center space-x-1'>
-                        <span>{post.user.full_name}</span>
+                        <span className='text-[#F1F5F9]'>{post.user.full_name}</span>
                         <BadgeCheck className='w-4 h-4 text-blue-500'/>
                     </div>
 
@@ -33,7 +33,7 @@ const PostCard = ({post}) => {
                 </div>
             </div>
 
-            {post.content && <div className='text-gray-800 text-sm whitespace-pre-line' dangerouslySetInnerHTML={{__html: postWithHashtags}}/>}
+            {post.content && <div className='text-[#94A3B8] text-sm whitespace-pre-line' dangerouslySetInnerHTML={{__html: postWithHashtags}}/>}
 
             <div className='grid grid-cols-2 gap-2'>
                 {post.image_urls.map((img, index) => (
