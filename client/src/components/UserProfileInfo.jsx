@@ -4,7 +4,7 @@ import moment from 'moment'
 
 const UserProfileInfo = ({user, posts, profileId, setShowEdit}) => {
     return (
-        <div className='relative py-4 px-6 md:px-8 bg-white'>
+        <div className='relative py-4 px-6 md:px-8 bg-[#1E293B]'>
             <div className='flex flex-col md:flex-row items-start gap-6'>
                 <div className='w-32 h-32 border-4 border-white shadow-lg absolute -top-16 rounded-full'>
                     <img 
@@ -18,24 +18,24 @@ const UserProfileInfo = ({user, posts, profileId, setShowEdit}) => {
                     <div className='flex flex-col md:flex-row items-start justify-between'>
                         <div>
                             <div className='flex items-center gap-3'>
-                                <h1 className='text-2xl font-bold text-gray-900'>{user.full_name}</h1>
+                                <h1 className='text-2xl font-bold text-[#F1F5F9]'>{user.full_name}</h1>
                                 <Verified className='w-6 h-6 text-blue-500'/>
                             </div>
 
-                            <p className='text-gray-600'>{user.username ? `@${user.username}` : 'Add a username'}</p>
+                            <p className='text-[#94A3B8]'>{user.username ? `@${user.username}` : 'Add a username'}</p>
                         </div>
 
                         {!profileId && 
-                            <button onClick={() => setShowEdit(true)} className='cursor-pointer flex items-center gap-2 border border-gray-300 hover:bg-gray-50 px-4 py-2 rounded-lg font-medium transition-colors mt-4 md:mt-0'>
+                            <button onClick={() => setShowEdit(true)} className='text-[#F1F5F9] bg-[#3B82F6] cursor-pointer flex items-center gap-2 border border-[#1F2937] hover:bg-[#2563EB] px-4 py-2 rounded-lg font-medium transition-colors mt-4 md:mt-0'>
                                 <PenBox className='w-4 h-4'/>
                                 Edit
                             </button>
                         }
                     </div>
 
-                    <p className='text-gray-700 text-sm max-w-md mt-4'>{user.bio}</p>
+                    <p className='text-[#94A3B8] text-sm max-w-md mt-4'>{user.bio}</p>
                     
-                    <div className='flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-gray-500 mt-4'>
+                    <div className='flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-[#94A3B8] mt-4'>
                         <span className='flex items-center gap-1.5'>
                             <MapPin className='w-4 h-4'/>
                             {user.location ? user.location : 'Add a location'}
@@ -48,16 +48,16 @@ const UserProfileInfo = ({user, posts, profileId, setShowEdit}) => {
 
                     <div className='flex items-center gap-6 mt-6 border-t border-gray-200 pt-4'>
                         <div>
-                            <span className='sm:text-xl font-bold text-gray-900'>{posts.length}</span>
-                            <span className='text-xs sm:text-sm text-gray-500 ml-1.5'>Posts</span>
+                            <span className='sm:text-xl font-bold text-[#F1F5F9]'>{posts.length}</span>
+                            <span className='text-xs sm:text-sm text-[#94A3B8] ml-1.5'>Posts</span>
                         </div>
                         <div>
-                            <span className='sm:text-xl font-bold text-gray-900'>{user.followers.length}</span>
-                            <span className='text-xs sm:text-sm text-gray-500 ml-1.5'>Followers</span>
+                            <span className='sm:text-xl font-bold text-[#F1F5F9]'>{user.followers.length}</span>
+                            <span className='text-xs sm:text-sm text-[#94A3B8] ml-1.5'>Followers</span>
                         </div>
                         <div>
-                            <span className='sm:text-xl font-bold text-gray-900'>{user.following.length}</span>
-                            <span className='text-xs sm:text-sm text-gray-500 ml-1.5'>Following</span>
+                            <span className='sm:text-xl font-bold text-[#F1F5F9]'>{user.following.length}</span>
+                            <span className='text-xs sm:text-sm text-[#94A3B8] ml-1.5'>Following</span>
                         </div>
                     </div>
                 </div>
