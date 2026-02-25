@@ -7,32 +7,32 @@ const Messages = () => {
     const navigate = useNavigate();
 
     return (
-        <div className='min-h-screen relative bg-slate-50'>
+        <div className='min-h-screen relative bg-[#0F172A]'>
             <div className='max-w-6xl mx-auto p-6'>
                 <div className='mb-8'>
-                    <h1 className='text-3xl font-bold text-slate-900 mb-2'>Messages</h1>
-                    <p className='text-slate-600'>Talk to your friends and family.</p>
+                    <h1 className='text-3xl font-bold text-[#F1F5F9] mb-2'>Messages</h1>
+                    <p className='text-[#94A3B8]'>Talk to your friends and family.</p>
                 </div>
 
                 <div className='flex flex-col gap-3'>
                     {dummyConnectionsData.map((user) => (
-                        <div key={user._id} className='max-w-xl flex gap-5 p-6 bg-white shadow rounded-md'>
+                        <div key={user._id} className='max-w-xl flex gap-5 p-6 bg-[#1E293B] shadow rounded-md'>
                             <img 
                                 src={user.profile_picture}
                                 alt="" 
                                 className='rounded-full size-12 mx-auto'
                             />
                             <div className='flex-1'>
-                                <p className='font-medium text-slate-700'>{user.full_name}</p>
-                                <p className='text-slate-500'>@{user.username}</p>
-                                <p className='text-sm text-gray-600'>{user.bio}</p>
+                                <p className='font-medium text-[#F1F5F9]'>{user.full_name}</p>
+                                <p className='text-[#94A3B8]'>@{user.username}</p>
+                                <p className='text-sm text-[#64748B]'>{user.bio}</p>
                             </div>
 
                             <div className='flex flex-col gap-2 mt-2'>
-                                <button onClick={() => navigate(`/messages/${user._id}`)} className='size-10 flex items-center justify-center text-sm rounded bg-slate-100 hover:bg-slate-200 text-slate-800 active:scale-95 transition cursor-pointer gap-1'>
+                                <button onClick={() => navigate(`/messages/${user._id}`)} className='size-10 flex items-center justify-center text-sm rounded bg-[#3B82F6] hover:bg-[#2563EB] text-[#F1F5F9] active:scale-95 transition cursor-pointer gap-1'>
                                     <MessageSquare className='w-4 h-4'/>
                                 </button>
-                                <button onClick={() => navigate(`/profile/${user._id}`)} className='size-10 flex items-center justify-center text-sm rounded bg-slate-100 hover:bg-slate-200 text-slate-800 active:scale-95 transition cursor-pointer'>
+                                <button onClick={() => navigate(`/profile/${user._id}`)} className='size-10 flex items-center justify-center text-sm rounded bg-[#3B82F6] hover:bg-[#2563EB] text-[#F1F5F9] active:scale-95 transition cursor-pointer'>
                                     <Eye className='w-4 h-4'/>
                                 </button>
                             </div>
